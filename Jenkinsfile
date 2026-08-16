@@ -7,7 +7,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/yourusername/ansible-lab.git'
+                    url: 'https://github.com/Rushikeshgm043/ansible-lab.git'
             }
         }
 
