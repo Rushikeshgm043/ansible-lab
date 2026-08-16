@@ -1,0 +1,16 @@
+---
+- hosts: postfix
+  become: yes
+
+  tasks:
+
+    - name: Ensure Postfix is installed
+      dnf:
+        name: postfix
+        state: present
+
+    - name: Start Postfix
+      service:
+        name: postfix
+        state: started
+        enabled: yes

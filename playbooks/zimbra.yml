@@ -1,0 +1,12 @@
+---
+- hosts: zimbra
+  become: yes
+
+  tasks:
+
+    - name: Check Zimbra status
+      command: su - zimbra -c "zmcontrol status"
+      register: zm_status
+
+    - debug:
+        var: zm_status.stdout
